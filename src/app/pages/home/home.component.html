@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container">
+
+  <form class="formulario" (ngSubmit)="transferir()">
+      <h2 class="formulario_titulo">Nova Transferência</h2>
+
+      <div class="form-field">
+        <label class="form-field_label" for="valor">Valor</label>
+        <input class="form-field_input" id="valor" type="text" [(ngModel)]="valor" name="valor" />
+      </div>
+
+
+      <div class="form-field">
+        <label class="form-field_label" for="destino">Destino</label>
+        <input class="form-field_input" id="valor" type="text" [(ngModel)]="destino" name="destino" >
+      </div>
+
+      <div class="botao-wrapper">
+      <button class="btn-success" type="submit">Transferir</button>
+    </div>
+
+    <p>Valor: {{valor}}</p>
+<p>Destino: {{destino}}</p>
+    </form>
+  </section>
